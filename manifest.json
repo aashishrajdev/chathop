@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "ChatHop",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Navigate and save prompts across ChatGPT, Claude, Gemini, Grok, and Deepseek",
   "permissions": [
     "storage",
@@ -16,7 +16,14 @@
     "*://*.deepseek.com/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chathop@extension.local",
+      "strict_min_version": "109.0"
+    }
   },
   "content_scripts": [
     {
